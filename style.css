@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    //primary colors
+
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    //Neutral colors
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+.title, .desc{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    Font-size : 14px;
+    color: var(--Darkgrayishblue);
+}
+
+.bigtitle h1, .price h1{
+
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+.price h1{
+    color: darkgreen;
+}
+.price p{
+    text-decoration: line-through;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--Darkgrayishblue);
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+.button button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 6% 30%;
+    border: none;
+    background-color: darkgreen;
+    color: var(--White);
+}
+.button button:hover{
+    background-color: darkolivegreen;
+}
+
+
+
+
+@media (max-width: 375px){
+    .container{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 65vh;
+        border-radius: 10px;
+    }
+    .image{
+        background-image: url("./images/image-product-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 35vh;
+        width: 100%;
+        border-radius: 10px 10px 0 0px;
+    }
+    .product{
+        height: 50vh;
+        width: 100%;
+        border-radius: 10px;
+        
+    }
+    .productContainer{
+        height: 82%;
+        padding: 9% 6% 0 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+    }
+}
+
+@media (min-width:375px){
+    .container{
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        width: 28%;
+        height: 40vh;
+        border-radius: 10px;
+    }
+    .image{
+        background-image: url("./images/image-product-desktop.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 50%;
+        border-radius: 10px 0 0 10px;
+    }
+    .product{
+        height: 100%;
+        width: 50%;
+        border-radius: 10px;
+        
+    }
+    .productContainer{
+        height: 93%;
+        padding: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    
+}
+
